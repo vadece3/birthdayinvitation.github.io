@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>🎉 Birthday Invitation</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      padding: 50px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    input, select {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #ff6f61;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #successMessage {
+      display: none;
+      font-size: 18px;
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>🎉 You're Invited!</h1>
+    <p>Join my birthday party!</p>
+
+    <p><b>Date:</b> May 10</p>
+    <p><b>Time:</b> 18:00</p>
+    <p><b>Location:</b> My Place 🎈</p>
+
+    <!-- FORM -->
+    <form id="rsvpForm">
+      <input type="text" name="name" placeholder="First Name" required>
+      <input type="text" name="surname" placeholder="Surname" required>
+
+      <select name="attendance" required>
+        <option value="">Will you attend?</option>
+        <option value="Yes">Yes, I'll be there 🎉</option>
+        <option value="No">Sorry, I can't come 😢</option>
+      </select>
+
+      <button type="submit">Confirm</button>
+    </form>
+
+    <!-- SUCCESS MESSAGE -->
+    <div id="successMessage">
+      ✅ Thank you! Your response has been submitted.
+    </div>
+
+  </div>
+
+  <script>
+    const form = document.getElementById("rsvpForm");
+    const successMessage = document.getElementById("successMessage");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      fetch("https://formspree.io/f/xojywozy", {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          form.style.display = "none"; // hide form
+          successMessage.style.display = "block"; // show message
+        } else {
+          alert("Oops! Something went wrong. PLease Retry Again");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
