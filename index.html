@@ -123,6 +123,21 @@
         font-size: 18px;
       }
     }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.3);
+    }
+
+    .hero {
+      position: relative;
+    }
+
+    .hero > * {
+      position: relative;
+      z-index: 1;
+    }
   </style>
 </head>
 
