@@ -14,9 +14,8 @@
     }
 
     .hero {
-      min-height: 100vh;
-      padding: 20px;
-      background: url("assets/images/modifR.jpg") center/cover no-repeat;
+      height: 100vh;
+      background: url("assets/images/modifRr.jpg") center no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -34,12 +33,14 @@
     }
 
     .section.jeans {
-      background: url("assets/images/jeans-stacked-wooden-table_1357-423.jpg")center/cover no-repeat;
+      background: url("assets/images/jeans-stacked-wooden-table_1357-423.jpg"); 
       color: #000;
+      text-decoration: none;
+      font-weight: bold;
     }
 
     .section.dark {
-      background: url("assets/images/mR.jpg")center/cover no-repeat;
+      background: url("assets/images/mR.jpg"); 
     }
 
     .section img {
@@ -69,21 +70,22 @@
 
     .card {
       background: white;
-      padding: 20px;
+      padding: 30px;
       border-radius: 15px;
-      width: 90%;          /* responsive width */
-      max-width: 400px;    /* limit on big screens */
+      max-width: 300px;
       margin: auto;
       box-shadow: 0 0 15px rgba(205, 89, 182, 0.475);
       font-family: "Comic Sans MS", sans-serif;
-      font-size: 18px;
-      font-style: italic;
+      font-size: 20px;
+      font-weight: bold; /* Make text bold */
+      font-style: italic; /* Italicize text */
       color: #000;
+      text-decoration: none;
+      font-weight: bold;
     }
 
     input, select {
-      width: 100%;
-      box-sizing: border-box;
+      width: 90%;
       padding: 10px;
       margin: 8px 0;
       border-radius: 8px;
@@ -103,40 +105,6 @@
       display: none;
       font-size: 18px;
       color: green;
-    }
-    @media (max-width: 768px) {
-
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      .section {
-        padding: 40px 15px;
-      }
-
-      .card {
-        font-size: 16px;
-        padding: 15px;
-      }
-
-      footer h2 {
-        font-size: 18px;
-      }
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.3);
-    }
-
-    .hero {
-      position: relative;
-    }
-
-    .hero > * {
-      position: relative;
-      z-index: 1;
     }
   </style>
 </head>
