@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Invitation</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Background image */
+.hero {
+    background: url('assets/images/denim-background-2.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    color: white;
+    position: relative;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Optional dark overlay for readability */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Header */
+h1 {
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 26px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Invite text */
+.invite {
+    font-size: 22px;
+    margin: 20px 0;
+}
+
+.age {
+    font-size: 90px;
+    font-weight: bold;
+    color: gold;
+}
+
+/* Sections */
+.section {
+    margin-top: 40px;
+}
+
+/* Dress code */
+.dress-title {
+    color: #ff6b6b;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.dress-text {
+    font-size: 24px;
+    font-style: italic;
+    color: #d6e6ff;
+}
+
+/* Location */
+.location-title {
+    color: #ff6b6b;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.location-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d6e6ff;
+}
+
+/* Footer */
+.footer {
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Optional: simple decorative shapes */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.c1 { width: 60px; height: 60px; background: gold; top: 40px; left: 40px; }
+.c2 { width: 50px; height: 50px; background: gray; top: 100px; left: 80px; }
+.c3 { width: 70px; height: 70px; background: lightgray; top: 70px; left: 10px; }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="hero">
+
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+    <div class="circle c3"></div>
+
+    <div class="content">
+        <h1>TATO KAREEN</h1>
+        <div class="subtitle">Birthday Party</div>
+
+        <div class="invite">
+            You are invited to my <span class="age">30</span><br>
+            th Birthday
+        </div>
+
+        <div class="section">
+            <div class="dress-title">DRESSING CODE:</div>
+            <div class="dress-text">
+                Elegant in Blue Denim<br>
+                with Anything
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="location-title">LOCATION:</div>
+            <div class="location-text">
+                Bottroper Strasse 438,<br>
+                45964 Gladbeck
+            </div>
+        </div>
+
+        <div class="footer">
+            Please confirm your presence
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
