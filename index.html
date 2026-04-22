@@ -1,89 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Event Landing Page</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Invitation</title>
 
-  <style>
+<style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #fff;
-      background: #000;
+        margin: 0;
+        font-family: Arial, sans-serif;
     }
 
+    /* Background image */
     .hero {
-      height: 100vh;
-      background: url("assets/images/modifRr.jpg") center no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+        background: url('assets/images/denim-background-2.jpg') no-repeat center center/cover;
+        min-height: 100vh;
+        color: white;
+        position: relative;
+        text-align: center;
+        padding: 40px 20px;
     }
 
-    .hero h1 {
-      font-size: 3rem;
-      letter-spacing: 3px;
+    /* Optional dark overlay for readability */
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.25);
     }
 
+    .content {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Header */
+    h1 {
+        font-size: 42px;
+        font-weight: 300;
+        letter-spacing: 2px;
+    }
+
+    .subtitle {
+        font-size: 26px;
+        font-style: italic;
+        margin-bottom: 20px;
+    }
+
+    /* Invite text */
+    .invite {
+        font-size: 22px;
+        margin: 20px 0;
+    }
+
+    .age {
+        font-size: 90px;
+        font-weight: bold;
+        color: gold;
+    }
+
+    /* Sections */
     .section {
-      padding: 60px 20px;
-      text-align: center;
+        margin-top: 40px;
     }
 
-    .section.jeans {
-      background: url("assets/images/jeans-stacked-wooden-table_1357-423.jpg"); 
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
+    /* Dress code */
+    .dress-title {
+        color: #ff6b6b;
+        font-size: 28px;
+        font-weight: bold;
     }
 
-    .section.dark {
-      background: url("assets/images/mR.jpg"); 
+    .dress-text {
+        font-size: 24px;
+        font-style: italic;
+        color: #d6e6ff;
     }
 
-    .section img {
-      width: 100%;
-      max-width: 600px;
-      border-radius: 10px;
-      margin-top: 20px;
+    /* Location */
+    .location-title {
+        color: #ff6b6b;
+        font-size: 28px;
+        font-weight: bold;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: #fff;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
+    .location-text {
+        font-size: 24px;
+        font-weight: bold;
+        color: #d6e6ff;
     }
 
+    /* Footer */
+    .footer {
+        margin-top: 50px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+        
     footer {
-      padding: 30px;
-      text-align: center;
-      background: #000;
-      font-size: 14px;
-      color: #aaa;
+        padding: 30px;
+        text-align: center;
+        background: #ffffff;
+        font-size: 14px;
+        color: #000000;
     }
-
+    .section.dark {
+        background: url("assets/images/mR.jpg"); 
+        padding: 60px 20px;
+        text-align: center;
+    }
     .card {
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      max-width: 300px;
-      margin: auto;
-      box-shadow: 0 0 15px rgba(205, 89, 182, 0.475);
-      font-family: "Comic Sans MS", sans-serif;
-      font-size: 20px;
-      font-weight: bold; /* Make text bold */
-      font-style: italic; /* Italicize text */
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        max-width: 300px;
+        margin: auto;
+        box-shadow: 0 0 15px rgba(205, 89, 182, 0.475);
+        font-family: "Comic Sans MS", sans-serif;
+        font-size: 20px;
+        font-weight: bold; /* Make text bold */
+        font-style: italic; /* Italicize text */
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
     }
-
     input, select {
       width: 90%;
       padding: 10px;
@@ -91,7 +131,6 @@
       border-radius: 8px;
       border: 1px solid #ccc;
     }
-
     button {
       background: #ff6f61;
       color: white;
@@ -100,22 +139,67 @@
       border-radius: 10px;
       cursor: pointer;
     }
-
     #successMessage {
       display: none;
       font-size: 18px;
       color: green;
     }
-  </style>
+
+    /* Optional: simple decorative shapes */
+    .circle {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.7;
+    }
+
+    .c1 { width: 60px; height: 60px; background: gold; top: 40px; left: 40px; }
+    .c2 { width: 50px; height: 50px; background: gray; top: 100px; left: 80px; }
+    .c3 { width: 70px; height: 70px; background: lightgray; top: 70px; left: 10px; }
+
+</style>
+
 </head>
 
 <body>
+<section>
+    <div class="hero">
 
-<!-- HERO -->
-<section class="hero">
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+    <div class="circle c3"></div>
+
+    <div class="content">
+        <h1>TATO KAREEN</h1>
+        <div class="subtitle">Birthday Party</div>
+
+        <div class="invite">
+            You are invited to my <span class="age">30</span>th Birthday
+        </div>
+
+        <div class="section">
+            <div class="dress-title">DRESSING CODE:</div>
+            <div class="dress-text">
+                Elegant in Blue Denim<br>
+                with Anything
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="location-title">LOCATION:</div>
+            <div class="location-text">
+                Bottroper Strasse 438,<br>
+                45964 Gladbeck
+            </div>
+        </div>
+
+        <div class="footer">
+            Please confirm your presence
+        </div>
+    </div>
+
+</div>
 </section>
 
-<!-- ABOUT -->
 <section class="section dark">
    <div>
     <div style=" font-family: Comic Sans MS, sans-serif;">
@@ -175,12 +259,9 @@
     });
   </script>
 </section>
-
-<!-- FOOTER -->
 <footer>
   <h2>DON’T Forget to Confirm Your Presence</h2>
   <p>Secure your Place🎉🎉🎉🎉🎉.</p>
 </footer>
-
 </body>
 </html>
